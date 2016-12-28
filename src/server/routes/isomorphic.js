@@ -7,11 +7,11 @@ import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import reducer from 'reducers';
-import { item } from 'actions';
+import reducer from 'common/redux/reducers';
+import { item } from 'common/redux/actions';
 import { log } from 'utilities';
 import { reactErrLink } from 'server/utilities';
-import routes from 'routes';
+import routes from 'common/routes';
 
 router.get('/*', reactErrLink(async (req, res, next) => {
   match({ routes, location: req.url },

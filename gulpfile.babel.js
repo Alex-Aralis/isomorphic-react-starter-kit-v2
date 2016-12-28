@@ -212,6 +212,7 @@ function watchSrc(done) {
 
 function watchAssets(done) {
 	gulp.watch(files(paths.assets.src), buildAssets);
+	done();
 }
 
 // unused in favor of webpackMiddleware with browser-sync
